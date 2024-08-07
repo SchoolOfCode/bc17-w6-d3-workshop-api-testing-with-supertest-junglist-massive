@@ -6,5 +6,9 @@ test('GET /api/health works',async()=>{
     expect(response.body).toEqual( {
         success: true,
         payload: "API is running correctly",
-      });})
-console.log
+    });
+    expect(response.headers["Content-Type"]).toMatch(application/json);
+    expect(response.status).toEqual(200);
+})
+
+      
